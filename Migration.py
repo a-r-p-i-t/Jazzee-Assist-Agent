@@ -594,7 +594,14 @@ def generate_score(prod_name,size):
 
 
 if software in comp.keys():
-    competitors=comp[software]
+    if software == "Confuence":
+        competitors="Notion"
+    elif software == "Notion":
+        competitors="Confluence"
+    elif software=="Box":
+        competitors="Dropbox"
+    elif software=="Dropbox":
+        competitors="Box"
     # st.markdown(competitors)
     xcv=competitors
 if len(competitors)>0:
